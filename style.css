@@ -1,0 +1,161 @@
+body{
+    font-family: "helvetica", Arial, sans-serif;
+    
+    }
+
+#cap{
+    top:0;
+    left:0;
+    width:100%;
+    height:20px;
+    margin-bottom: -20px;
+    margin-top: -14px;
+    margin-left:-23px;
+    padding:0 10px;
+    border: 14px solid black;
+    border-top-left-radius:2em;
+    border-top-right-radius:2em;
+    border-bottom:0;
+/*border-bottom-right-radius:2em;
+border-bottom-left-radius:2em;*/
+}
+
+#center{
+    min-height:493px;
+    }
+
+#bottom {
+color: grey;
+font-size: 10px;
+margin-top: 30px;
+background:pink;
+}
+
+#bottom p{
+    padding:5px;
+    }
+
+
+/*#background .bg1{
+    background:transparent url('../distort-B.png');
+    background-size: 13%;
+    z-index:3;
+}
+
+#background .bg2{
+    background:transparent url('../distort-B.png');
+    background-size: 23%;
+    z-index:3;
+}*/
+
+#background .bg3{
+    background:transparent url('dots.png');
+    z-index:4;
+}
+
+#topPos{
+    margin: 0 auto;
+    width:60%;
+    max-width:600px;
+}
+
+#center{
+    background:white;
+    border-radius:5px;
+}
+
+body{
+    background:black;
+}
+
+#content, #background, #background div{
+    /*border-radius:15px;*/
+}
+
+header h1 img{
+    background:pink;
+}
+
+#headerFlare{
+    float:right;
+}
+
+@font-face {
+    font-family: ImpactLabel;
+    src: url('ImpactLabel.ttf');
+    font-weight:400;
+}
+
+#center nav li{
+    font-family: ImpactLabel, Helvetica, Arial, sans-serif;
+}
+
+#center nav ul{
+    font-family: ImpactLabel, Helvetica, Arial, sans-serif;
+    width:120%;
+    float:left;
+    margin-left:-90px;
+    margin-top:-30px;
+    list-style: none;
+}
+
+#center nav li a{
+    color:white;
+    font-size: 20px;
+}
+
+.post.text img {
+    display: block;
+    width: 95%;
+    margin: auto;
+}
+
+.post.quote .source {
+background: white;
+}
+
+.post.quote {
+background: lightblue;
+border-radius: 5px;
+border: lightblue solid 1px;
+}
+
+.post.photo img {
+display: block;
+width: 95%;
+margin: auto;
+}
+
+.post.photo .caption {
+width: 94%;
+border: 1px solid black;
+display: block;
+margin: auto;
+}
+
+.photoframe {
+padding: 5px;
+}
+
+#center>ol {
+list-style: none;
+margin: 0 0 0 -40px;
+}
+
+#center>ol li.post {
+padding: 15px 5px;
+}
+
+
+.post.link a{
+    color:white;
+    font-family: ImpactLabel, Helvetica, Arial, sans-serif;
+}
+
+.post.link .anchor{
+    background:black;
+    }
+
+.post.audio .album_art img{
+    width:95%;
+    }

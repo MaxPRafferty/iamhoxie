@@ -1,0 +1,169 @@
+<html>
+    
+    <head>
+        <title>I, A.M. Hoxie</title>
+        <link rel="stylesheet" type="text/css" href="layout.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+   <body>
+    <div id="wrap">
+        <div id="pagePos">
+            <div id="content">
+                <div id="cap"></div>
+                <div id="contentPos">
+                    <div id="middle">
+                        <div id="middleBarrier">
+                            <div id="left"></div>
+                            <div id="centerPos">
+                                <div id="center">
+                                    <nav>
+                                        <ul>
+                                            {block:PreviousPage}
+                                            <li><a href="{PreviousPage}">Prev</a></li>
+                                            {/block:PreviousPage}
+                                            <li><a href="/first">First</a></li>
+                                            <li><a href="/archive">Archive</a></li>
+                                            {block:HasPages}
+  {block:Pages}<li><a href="{URL}" class="page">{Label}</a></li>{/block:Pages}
+{/block:HasPages}
+                                            <li><a href="/">Latest</a></li>
+                                            {block:NextPage}
+                                            <li><a href="{NextPage}">Next</a></li>
+                                            {/block:NextPage}
+                                        </ul>
+                                    </nav>
+                                    <ol> 
+                                        {block:Posts} 
+                                            {block:Text}
+                                        <li class="post text">
+                                            <article>{block:Title}
+                                                <h1><a href="{Permalink}">{Title}</a></h1>{/block:title} {Body}</article>
+                                            </li>
+                                            {/block:Text} 
+                                            {block:Photo}
+                                        <li class="post photo">
+                                        <div class="photoFrame">
+                                            <img src="{PhotoURL-500}"
+                                            alt="{PhotoAlt}" />{block:Caption}
+                                            <div class="caption">{Caption}</div>{/block:Caption} </div>
+                                            </li>
+                                            {/block:Photo} 
+                                            
+                                            {block:Panorama} 
+                                            <li class="post panorama">
+                                            {LinkOpenTag}
+                                            <img
+                                            src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />{LinkCloseTag} {block:Caption}
+                                            <div class="caption">{Caption}</div>{/block:Caption} 
+                                            </li>
+                                            {/block:Panorama} 
+                                            
+                                            {block:Photoset} 
+                                            <li class="post photoset">
+                                            {Photoset-500}
+                                            {block:Caption}
+                                            <div class="caption">{Caption}</div>
+                                            {/block:Caption} 
+                                            </li>
+                                            {/block:Photoset} 
+
+                                            {block:Quote}
+                                                <li class="post quote">
+                                                "{Quote}"
+                                            {block:Source}
+                                            <div class="source">{Source}</div>{/block:Source}
+                                            </li>
+                                            {/block:Quote} 
+                                            
+                                            {block:Link} 
+                                            <li class="post link">
+                                            <div class="anchor"><a href="{URL}"
+                                            class="link" {Target}>{Name}</a></div>
+                                            {block:Description}
+                                            <div class="description">{Description}</div>{/block:Description} 
+                                            </li>
+                                            {/block:Link} 
+                                            {block:Chat} 
+                                            <li class="post chat">
+                                            {block:Title}
+                                             <h3><a href="{Permalink}">{Title}</a></h3>
+                                            {/block:Title}
+                                            <ul class="chat">{block:Lines}
+                                                <li class="{Alt} user_{UserNumber}">{block:Label} <span class="label">{Label}</span>
+                                                    {/block:Label} {Line}</li>{/block:Lines}</ul>
+                                        </li>
+                                            {/block:Chat}
+                                            {block:Video} 
+                                        <li class="post video">
+                                            {Video-500} {block:Caption}
+                                            <div class="caption">{Caption}</div>{/block:Caption} 
+                                            </li>
+                                            {/block:Video} 
+                                            {block:Audio}
+                                        <li class="post audio">
+                                        {block:Audio}
+                        
+                        {block:AudioEmbed}
+                            {AudioEmbed}
+                        {/block:AudioEmbed}
+                        
+                        {block:AudioPlayer}
+                            {block:IfShowAlbumArtOnAudioPosts}
+                                {block:AlbumArt}
+                                    <div class="album_art">
+                                        <img src="{AlbumArtURL}" alt="{block:Artist}{Artist}{/block:Artist}{block:TrackName} - {TrackName}{/block:TrackName}" style="margin-bottom:10px;" />
+                                    </div>
+                                {/block:AlbumArt}
+                            {/block:IfShowAlbumArtOnAudioPosts}
+                        
+                            <div class="audio">
+                                <div class="player">{AudioPlayerWhite}</div>
+                                <div class="meta">{block:PlayCount}{PlayCountWithLabel}{/block:PlayCount}{block:ExternalAudio}<span class="download_external_audio"> &bull; <a href="{ExternalAudioURL}">{lang:Download}</a></span>{/block:ExternalAudio}</div>
+                                <div class="clear"></div>
+                            </div>
+                        {/block:AudioPlayer}
+                        
+                        <div class="clear"></div>
+                        
+                        {block:Caption}<div class="copy">{Caption}</div>{/block:Caption}
+                        
+                    {/block:Audio}
+                                        </li>
+                                            {/block:Audio} 
+                                            {/block:Posts}
+                                        </ol>
+                                  
+                            </div>
+                            <div id="right"></div>
+                        </div>
+                    </div>
+                    </div>
+                                   <div id="bottom">
+                        <footer>
+                            <p>iamhoxie.com ©2013 Angela Hoxie. All Rights Reserved. Theme by <a href="js-e.us">Max P. Rafferty</a>. Impact Label by <a href="http://www.dafont.com/michael-tension.d1949">TensionType</a>. League Gothic by <a href="http://www.theleagueofmoveabletype.com">The League of Movable Type</a>. Powered by Tumblr. </p>
+                        
+                        </footer>
+                        <img src="LowerLeft.png" style="margin-left: -10px;margin-top: -18px;float: left;">
+                        <img src="LowerRight.png" style="float: right;margin: -18px -10px 0px 0px;">
+                    </div>
+                    <div id="top">
+                        <header>
+                            <div id="topPos">
+                                 <h1><span style="display:none;" >{Title}</span><img src="Logo.png" alt="{Title}" /></h1> 
+                            </div>
+                        </header>
+                    </div>
+                </div>
+            </div>
+            <div id="background">
+                <div class="bg1"></div>
+                <div class="bg2"></div>
+                <div class="bg3"></div>
+                <div class="bg4"></div>
+            </div>
+        </div>
+        </div>
+    </body>
+
+</html>

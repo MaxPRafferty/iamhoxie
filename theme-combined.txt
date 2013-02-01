@@ -1,0 +1,470 @@
+<html>
+    
+    <head>
+        <title>{Title}</title>
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        <link rel="stylesheet" type="text/css" href="layout.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="color:Background" content="pink"/>
+        <meta name="color:Content Background" content="#fff"/>
+        <meta name="color:Text" content="#000"/>
+        <meta name="image:Header" content="http://static.tumblr.com/afc53c09df8d94189d8e76920dcae333/mupy6qk/dNPmhi3ma/tumblr_static_logo.png"/>
+        <meta name="image:Background" content="http://static.tumblr.com/442c4bf22335754261aeb7c9caa8acb2/mupy6qk/m0jmhi3m6/tumblr_static_dots.png"/>
+        <style>
+        html,body {
+height: 100%;
+}
+        body{
+overflow-x: hidden;
+}
+#wrap{
+    min-height:100%;
+    }
+#pagePos, #contentPos{
+    position:relative;
+    margin:auto;
+    width:100%;
+    max-width:750px;
+}
+
+#contentPos{
+    padding:200px 0 0 0;
+}
+#content, #background{
+    max-width:750px;
+    margin:auto;
+}
+#content, #background, #background div{
+    top:0px; right:10px; bottom:0px; left:10px;
+}
+
+#content, #background{
+    position:absolute;
+}
+
+#content{
+    z-index:53;
+}
+
+#background{
+    position:fixed;
+    z-index:2;
+}
+
+#background div{
+    position:fixed;
+}
+
+#top, #middle, #bottom{
+    width:100%;
+    margin:0;
+    padding:0;
+    border:0;
+}
+#top{
+    position:absolute;
+    top:0px;
+    right:0px;
+    left:0px;
+    height:200px;
+    z-index:55;
+}
+#middle, #bottom{
+    position:relative;
+}
+
+#middle{
+    
+}
+
+#middleBarrier{
+    max-width:900px;
+    position:relative;
+    margin:0 auto;
+}
+
+#bottom{
+    z-index:55;
+}
+
+#left, #right{
+    position:absolute;
+    top:0;
+    bottom:0;
+    max-width:150px;
+    width:20%;
+}
+
+#left{
+    
+    right:80%;
+    width:150px;
+    
+}
+
+#right{
+    
+    left:80%;
+    width:150px;
+}
+
+#centerPos{
+    position:relative;
+    margin:0 auto;
+    width:60%;
+    max-width:600px;
+}
+
+#center{
+    padding:15px
+}
+
+#center nav li{
+    float:left;
+    background:black;
+    color: white;
+    margin: 2px;
+    padding:3px
+}
+
+#center nav ul{
+    margin: auto;
+}
+
+#background{
+    background:{color:Background};
+}
+
+
+body{
+    font-family: "helvetica", Arial, sans-serif;
+    
+    }
+
+#cap{
+    top:0;
+    left:0;
+    width:100%;
+    height:20px;
+    margin-bottom: -20px;
+    margin-top: -14px;
+    margin-left:-23px;
+    padding:0 10px;
+    border: 14px solid black;
+    border-top-left-radius:2em;
+    border-top-right-radius:2em;
+    border-bottom:0;
+/*border-bottom-right-radius:2em;
+border-bottom-left-radius:2em;*/
+}
+
+#center{
+    min-height:493px;
+    }
+
+#bottom {
+color: grey;
+font-size: 10px;
+margin-top: 30px;
+background:{color:Background};
+}
+
+#bottom p{
+    padding:5px;
+    }
+
+
+/*#background .bg1{
+    background:transparent url('../distort-B.png');
+    background-size: 13%;
+    z-index:3;
+}
+
+#background .bg2{
+    background:transparent url('../distort-B.png');
+    background-size: 23%;
+    z-index:3;
+}*/
+
+#background .bg3{
+    background:transparent url('{image:Background}');
+    z-index:4;
+}
+
+#topPos{
+    margin: 0 auto;
+    width:60%;
+    max-width:600px;
+}
+
+#center{
+    background:white;
+    border-radius:5px;
+}
+
+body{
+    background:black;
+}
+
+#content, #background, #background div{
+    /*border-radius:15px;*/
+}
+
+header h1 img{
+    background:{color:Background};
+}
+
+#headerFlare{
+    float:right;
+}
+
+@font-face {
+    font-family: ImpactLabel;
+    src: url('http://js-e.us/fonts/ImpactLabel.ttf');
+    font-weight:400;
+}
+
+#center nav li{
+    font-family: ImpactLabel, Helvetica, Arial, sans-serif;
+}
+
+#center nav ul{
+    font-family: ImpactLabel, Helvetica, Arial, sans-serif;
+    width:120%;
+    float:left;
+    margin-left:-90px;
+    margin-top:-30px;
+    list-style: none;
+}
+
+#center nav li a{
+    color:white;
+    font-size: 20px;
+}
+
+.post.text img {
+    display: block;
+    width: 95%;
+    margin: auto;
+}
+
+.post.quote .source {
+background: white;
+}
+
+.post.quote {
+background: lightblue;
+border-radius: 5px;
+border: lightblue solid 1px;
+}
+
+.post.photo img {
+display: block;
+width: 95%;
+margin: auto;
+}
+
+.post.photo .caption {
+width: 94%;
+border: 1px solid black;
+display: block;
+margin: auto;
+}
+
+.photoframe {
+padding: 5px;
+}
+
+#center>ol {
+list-style: none;
+margin: 0 0 0 -40px;
+}
+
+#center>ol li.post {
+padding: 15px 5px;
+}
+
+
+.post.link a{
+    color:white;
+    font-family: ImpactLabel, Helvetica, Arial, sans-serif;
+}
+
+.post.link .anchor{
+    background:black;
+    }
+
+.post.audio .album_art img{
+    width:95%;
+    }
+    
+
+
+        </style>
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+    </head>
+    
+    <body>
+    <div id="wrap">
+        <div id="pagePos">
+            <div id="content">
+                <div id="cap"></div>
+                <div id="contentPos">
+                    <div id="middle">
+                        <div id="middleBarrier">
+                            <div id="left"></div>
+                            <div id="centerPos">
+                                <div id="center">
+                                    <nav>
+                                        <ul>
+                                            {block:PreviousPage}
+                                            <li><a href="{PreviousPage}">Prev</a></li>
+                                            {/block:PreviousPage}
+                                            <li><a href="/first">First</a></li>
+                                            <li><a href="/archive">Archive</a></li>
+                                            {block:HasPages}
+  {block:Pages}<li><a href="{URL}" class="page">{Label}</a></li>{/block:Pages}
+{/block:HasPages}
+                                            <li><a href="/">Latest</a></li>
+                                            {block:NextPage}
+                                            <li><a href="{NextPage}">Next</a></li>
+                                            {/block:NextPage}
+                                        </ul>
+                                    </nav>
+                                    <ol> 
+                                        {block:Posts} 
+                                            {block:Text}
+                                        <li class="post text">
+                                            <article>{block:Title}
+                                                <h1><a href="{Permalink}">{Title}</a></h1>{/block:title} {Body}</article>
+                                            </li>
+                                            {/block:Text} 
+                                            {block:Photo}
+                                        <li class="post photo">
+                                        <div class="photoFrame">
+                                            <img src="{PhotoURL-500}"
+                                            alt="{PhotoAlt}" />{block:Caption}
+                                            <div class="caption">{Caption}</div>{/block:Caption} </div>
+                                            </li>
+                                            {/block:Photo} 
+                                            
+                                            {block:Panorama} 
+                                            <li class="post panorama">
+                                            {LinkOpenTag}
+                                            <img
+                                            src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />{LinkCloseTag} {block:Caption}
+                                            <div class="caption">{Caption}</div>{/block:Caption} 
+                                            </li>
+                                            {/block:Panorama} 
+                                            
+                                            {block:Photoset} 
+                                            <li class="post photoset">
+                                            {Photoset-500}
+                                            {block:Caption}
+                                            <div class="caption">{Caption}</div>
+                                            {/block:Caption} 
+                                            </li>
+                                            {/block:Photoset} 
+
+                                            {block:Quote}
+                                                <li class="post quote">
+                                                "{Quote}"
+                                            {block:Source}
+                                            <div class="source">{Source}</div>{/block:Source}
+                                            </li>
+                                            {/block:Quote} 
+                                            
+                                            {block:Link} 
+                                            <li class="post link">
+                                            <div class="anchor"><a href="{URL}"
+                                            class="link" {Target}>{Name}</a></div>
+                                            {block:Description}
+                                            <div class="description">{Description}</div>{/block:Description} 
+                                            </li>
+                                            {/block:Link} 
+                                            {block:Chat} 
+                                            <li class="post chat">
+                                            {block:Title}
+                                             <h3><a href="{Permalink}">{Title}</a></h3>
+                                            {/block:Title}
+                                            <ul class="chat">{block:Lines}
+                                                <li class="{Alt} user_{UserNumber}">{block:Label} <span class="label">{Label}</span>
+                                                    {/block:Label} {Line}</li>{/block:Lines}</ul>
+                                        </li>
+                                            {/block:Chat}
+                                            {block:Video} 
+                                        <li class="post video">
+                                            {Video-500} {block:Caption}
+                                            <div class="caption">{Caption}</div>{/block:Caption} 
+                                            </li>
+                                            {/block:Video} 
+                                            {block:Audio}
+                                        <li class="post audio">
+                                        {block:Audio}
+                        
+                        {block:AudioEmbed}
+                            {AudioEmbed}
+                        {/block:AudioEmbed}
+                        
+                        {block:AudioPlayer}
+                            {block:IfShowAlbumArtOnAudioPosts}
+                                {block:AlbumArt}
+                                    <div class="album_art">
+                                        <img src="{AlbumArtURL}" alt="{block:Artist}{Artist}{/block:Artist}{block:TrackName} - {TrackName}{/block:TrackName}" style="margin-bottom:10px;" />
+                                    </div>
+                                {/block:AlbumArt}
+                            {/block:IfShowAlbumArtOnAudioPosts}
+                        
+                            <div class="audio">
+                                <div class="player">{AudioPlayerWhite}</div>
+                                <div class="meta">{block:PlayCount}{PlayCountWithLabel}{/block:PlayCount}{block:ExternalAudio}<span class="download_external_audio"> &bull; <a href="{ExternalAudioURL}">{lang:Download}</a></span>{/block:ExternalAudio}</div>
+                                <div class="clear"></div>
+                            </div>
+                        {/block:AudioPlayer}
+                        
+                        <div class="clear"></div>
+                        
+                        {block:Caption}<div class="copy">{Caption}</div>{/block:Caption}
+                        
+                    {/block:Audio}
+                                        </li>
+                                            {/block:Audio} 
+                                            {/block:Posts}
+                                        </ol>
+                                  
+                            </div>
+                            <div id="right"></div>
+                        </div>
+                    </div>
+                    </div>
+                                   <div id="bottom">
+                        <footer>
+                            <p>iamhoxie.com ©2013 Angela Hoxie. All Rights Reserved. Theme by <a href="js-e.us">Max P. Rafferty</a>. Impact Label by <a href="http://www.dafont.com/michael-tension.d1949">TensionType</a>. League Gothic by <a href="http://www.theleagueofmoveabletype.com">The League of Movable Type</a>. Powered by Tumblr. </p>
+                        
+                        </footer>
+                        <img src="http://media.tumblr.com/9a203c79fa93e3ca1842941ebc66762a/tumblr_inline_mhiiiuDVT21qz4rgp.png" style="margin-left: -10px;margin-top: -18px;float: left;">
+                        <img src="http://media.tumblr.com/9c9d3885a4339ef007c512f87c7d07d7/tumblr_inline_mhiij0fLgY1qz4rgp.png" style="float: right;margin: -18px -10px 0px 0px;">
+                    </div>
+                    <div id="top">
+                        <header>
+                            <div id="topPos">
+                                 <h1><span style="display:none;" >{Title}</span><img src="{image:Header}" alt="{Title}" /></h1> 
+                            </div>
+                        </header>
+                    </div>
+                </div>
+            </div>
+            <div id="background">
+                <div class="bg1"></div>
+                <div class="bg2"></div>
+                <div class="bg3"></div>
+                <div class="bg4"></div>
+            </div>
+        </div>
+        </div>
+    </body>
+
+</html>

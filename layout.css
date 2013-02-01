@@ -1,0 +1,123 @@
+        html,body {
+height: 100%;
+}
+        body{
+overflow-x: hidden;
+}
+#wrap{
+    min-height:100%;
+    }
+#pagePos, #contentPos{
+    position:relative;
+    margin:auto;
+    width:100%;
+    max-width:750px;
+}
+
+#contentPos{
+    padding:200px 0 0 0;
+}
+#content, #background{
+    max-width:750px;
+    margin:auto;
+}
+#content, #background, #background div{
+    top:0px; right:10px; bottom:0px; left:10px;
+}
+
+#content, #background{
+    position:absolute;
+}
+
+#content{
+    z-index:53;
+}
+
+#background{
+    position:fixed;
+    z-index:2;
+}
+
+#background div{
+    position:fixed;
+}
+
+#top, #middle, #bottom{
+    width:100%;
+    margin:0;
+    padding:0;
+    border:0;
+}
+#top{
+    position:absolute;
+    top:0px;
+    right:0px;
+    left:0px;
+    height:200px;
+    z-index:55;
+}
+#middle, #bottom{
+    position:relative;
+}
+
+#middle{
+    
+}
+
+#middleBarrier{
+    max-width:900px;
+    position:relative;
+    margin:0 auto;
+}
+
+#bottom{
+    z-index:55;
+}
+
+#left, #right{
+    position:absolute;
+    top:0;
+    bottom:0;
+    max-width:150px;
+    width:20%;
+}
+
+#left{
+    
+    right:80%;
+    width:150px;
+    
+}
+
+#right{
+    
+    left:80%;
+    width:150px;
+}
+
+#centerPos{
+    position:relative;
+    margin:0 auto;
+    width:60%;
+    max-width:600px;
+}
+
+#center{
+    padding:15px
+}
+
+#center nav li{
+    float:left;
+    background:black;
+    color: white;
+    margin: 2px;
+    padding:3px
+}
+
+#center nav ul{
+    margin: auto;
+}
+
+#background{
+    background:pink;
+}
