@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <meta name="color:Background" content="pink"/>
         <meta name="color:Content Background" content="#fff"/>
-        <meta name="color:Text" content="#000"/>
+        <meta name="color:Heading" content="black"/>
         <meta name="image:Header" content="http://static.tumblr.com/afc53c09df8d94189d8e76920dcae333/mupy6qk/dNPmhi3ma/tumblr_static_logo.png"/>
         <meta name="image:Background" content="http://static.tumblr.com/442c4bf22335754261aeb7c9caa8acb2/mupy6qk/m0jmhi3m6/tumblr_static_dots.png"/>
         <style>
@@ -112,13 +112,10 @@ overflow-x: hidden;
 #centerPos{
     position:relative;
     margin:0 auto;
-    width:60%;
+    width:100%;
     max-width:600px;
 }
 
-#center{
-    padding:15px
-}
 
 #center nav li{
     float:left;
@@ -198,11 +195,6 @@ background:{color:Background};
     max-width:600px;
 }
 
-#center{
-    background:white;
-    border-radius:5px;
-}
-
 body{
     background:black;
 }
@@ -245,32 +237,37 @@ header h1 img{
 
 .post.text img {
     display: block;
-    width: 95%;
+    width: 100%;
     margin: auto;
 }
 
 .post.quote .source {
-background: white;
+background: {color:Content Background};
 }
 
 .post.quote {
-background: lightblue;
-border-radius: 5px;
-border: lightblue solid 1px;
+
 }
 
+.post.quote .quotation{
+    background: lightblue;
+border-radius: 5px;
+border: lightblue solid 1px;
+    }
+
 .post.photo img {
-display: block;
-width: 95%;
-margin: auto;
+width: 100%;
 }
 
 .post.photo .caption {
-width: 94%;
-border: 1px solid black;
-display: block;
-margin: auto;
+width: 100%;
 }
+
+.post.photo .photoFrame{
+    border: 1px solid black;
+    margin: 5px;
+}
+    
 
 .photoframe {
 padding: 5px;
@@ -278,7 +275,6 @@ padding: 5px;
 
 #center>ol {
 list-style: none;
-margin: 0 0 0 -40px;
 }
 
 #center>ol li.post {
@@ -293,12 +289,49 @@ padding: 15px 5px;
 
 .post.link .anchor{
     background:black;
+    display:inline;
+    padding: 1px 2px;
     }
 
 .post.audio .album_art img{
-    width:95%;
+    width:100%;
     }
     
+.post.video .copy{
+    display:none;
+    }
+    
+    .post.video > iframe {
+margin-top: 40px;
+}
+
+.post.video > iframe + p {
+margin-top: -321px;
+margin-bottom: 321px;
+}
+
+.post.video>iframe+p>strong {
+font-size: 20px;
+font-weight: bold;
+}
+
+.post h1 {
+margin: 10px 10px;
+}
+
+.post h1 a{
+    text-decoration:none;
+    color:{color:Heading};
+    }
+
+#center > ol li.post {
+padding: 1px 30px 15px 30px;
+margin: 0 0 10px 0;
+border-radius:5px;
+background: {color:Content Background};
+}
+
+
 
 
         </style>
@@ -320,18 +353,17 @@ padding: 15px 5px;
                                 <div id="center">
                                     <nav>
                                         <ul>
-                                            {block:PreviousPage}
-                                            <li><a href="{PreviousPage}">Prev</a></li>
-                                            {/block:PreviousPage}
-                                            <li><a href="/first">First</a></li>
-                                            <li><a href="/archive">Archive</a></li>
+                                            {block:NextPage}
+                                            <li><a href="{NextPage}">Next</a></li>
+                                            {/block:NextPage}
+                                           <li><a href="/archive">Archive</a></li>
                                             {block:HasPages}
   {block:Pages}<li><a href="{URL}" class="page">{Label}</a></li>{/block:Pages}
 {/block:HasPages}
                                             <li><a href="/">Latest</a></li>
-                                            {block:NextPage}
-                                            <li><a href="{NextPage}">Next</a></li>
-                                            {/block:NextPage}
+                                            {block:PreviousPage}
+                                            <li><a href="{PreviousPage}">Prev</a></li>
+                                            {/block:PreviousPage}
                                         </ul>
                                     </nav>
                                     <ol> 
@@ -371,9 +403,9 @@ padding: 15px 5px;
 
                                             {block:Quote}
                                                 <li class="post quote">
-                                                "{Quote}"
+                                                <div class="quotation">{Quote}"
                                             {block:Source}
-                                            <div class="source">{Source}</div>{/block:Source}
+                                            <div class="source">-{Source}</div>{/block:Source}</div>
                                             </li>
                                             {/block:Quote} 
                                             
@@ -397,13 +429,14 @@ padding: 15px 5px;
                                             {/block:Chat}
                                             {block:Video} 
                                         <li class="post video">
-                                            {Video-500} {block:Caption}
-                                            <div class="caption">{Caption}</div>{/block:Caption} 
+                                             {Video-500} 
+                                             {block:Caption}
+                                            {Caption}{/block:Caption}
+                                            
                                             </li>
                                             {/block:Video} 
                                             {block:Audio}
                                         <li class="post audio">
-                                        {block:Audio}
                         
                         {block:AudioEmbed}
                             {AudioEmbed}
